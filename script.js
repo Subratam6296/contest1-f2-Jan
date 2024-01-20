@@ -8,19 +8,28 @@ let arr = [
 // Please don't change anything in the index.html file.
 
 function PrintDeveloper() {
-  //Write your code here , just console.log
+  const developers = arr.filter(person => person.profession === 'developer');
+  console.log('Developers:', developers);
 }
 
 function addData() {
-  //Write your code here, just console.log
+  const newData = { id: 4, name: 'emma', age: 22, profession: 'designer' };
+  arr.push(newData);
+  console.log('Data added:', newData);
 }
 
 function removeAdmin() {
-  //Write your code here, just console.log
+  const updatedArr = arr.filter(person => person.profession !== 'admin');
+  console.log('Array with admins removed:', updatedArr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  const newArray = [
+    { id: 5, name: 'michael', age: 25, profession: 'analyst' },
+    { id: 6, name: 'susan', age: 23, profession: 'engineer' },
+  ];
+  const concatenatedArr = arr.concat(newArray);
+  console.log('Concatenated Array:', concatenatedArr);
 }
 
 // Here is an example of how functions work,
